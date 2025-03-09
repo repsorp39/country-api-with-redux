@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    margin-top: 10px;
+}
+
+main{
+    margin-top: -10px;
+    min-height: 100vh;
+    font-family: 'Nunito Sans';
+    padding-bottom: 10px;
+
+}
+
+
+// ## Colors
+
+// ### Neutral
+
+$DarkBlue: hsl(209, 23%, 22%);
+$VeryDarkB: hsl(207, 26%, 17%);
+$VeryDark: hsl(200, 15%, 8%);
+$DarkGray: hsl(0, 0%, 52%);
+$VeryLightGray: hsl(0, 0%, 98%);
+$White: hsl(0, 0%, 100%);

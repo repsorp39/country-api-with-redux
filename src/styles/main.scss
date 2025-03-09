@@ -1,0 +1,344 @@
+@import "./settings.scss";
+
+.dark-theme{
+    background-color: $VeryDarkB;
+ 
+    header,input,svg,select{
+        color: $White;
+        background-color: $DarkBlue;
+    }
+
+    input{
+        &::placeholder{
+            color: $White;
+        }
+    }
+
+    div{
+        &:has(input){
+            background-color: $DarkBlue;
+        }
+    }
+
+    select{
+        border: 1px solid gainsboro;
+    }
+
+    .btn-back{
+        box-shadow: 5px 5px 5px  $VeryDark;
+        background-color: $DarkBlue;
+        button{
+            color: $White;
+        }
+    }
+   
+    .countries-list{
+        li{
+            color: $White;
+            background-color: $DarkBlue; 
+            box-shadow: 5px 5px 5px  $VeryDark;
+
+        }
+    }
+
+    .single-country{
+        img{
+            box-shadow: 5px 5px 5px  $VeryDark;
+        }
+        li{
+            color: $White;
+        }
+    }
+
+    h2{
+        color: $White;
+    }
+
+    strong{
+        color: $White;
+        font-weight: 600;
+    }
+
+    .single-country{
+        span{
+            min-width: 200px;
+            height: 25px;
+            color: $White;
+            background-color: $DarkBlue;
+            margin-left:10px ;
+            padding: 5px;
+            box-shadow: 3px 3px 3px  $VeryDark;
+    
+        }
+    }
+}
+
+.light-theme{
+
+    header{
+        background-color: $VeryLightGray;
+        box-shadow: 1px 1px 1px $VeryDark;
+    }
+
+    div{
+        &:has(input){
+            background-color: $VeryLightGray;
+            border: 1px solid gainsboro;
+        }
+    }
+
+   .countries-list{
+        li{
+            background-color: $VeryLightGray;
+            border: 1px dotted gainsboro;
+            box-shadow: 10px 10px 10px gainsboro;
+        }
+   }
+
+   .single-country{
+        span{
+            min-width: 200px;
+            height: 25px;
+            background-color: $VeryLightGray;
+            margin-left:10px ;
+            padding: 5px;
+            box-shadow: 1px 1px 1px  $VeryDarkB;
+        }
+}
+   
+.btn-back{
+    box-shadow: 1px 1px 1px  $VeryDark;
+}
+
+.single-country{
+    img{
+        box-shadow: 1px 1px 1px  $VeryDark;
+    }
+}
+  
+}
+
+header{
+    padding: 10px;
+    margin-bottom: 30px;
+
+    section{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width:1300px) {
+            width: 100%;
+        }
+    }
+
+   svg,span{
+    display: block;
+   }
+
+   p{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+   }
+
+   @media screen and (max-width:1300px) {
+    h2{
+        font-size: 1em;
+    }
+   }
+}
+
+ul{
+    list-style: none;
+
+}
+
+.filtering{
+    margin-bottom: 25px;
+
+    article{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (max-width:1300px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    div{
+        svg{
+            display: block;
+            margin-left: 15px;
+        }
+
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+
+        input{
+            width: 380px;
+            height: 35px;
+            border: none;
+            outline: none;
+
+            @media screen and (max-width:1300px) {
+                width: 300px;
+            }
+        }
+
+        &:nth-child(1){
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 2px;
+        }
+    }
+
+    select{
+        height: 35px;
+        padding: 10px;
+        border: none;
+    }
+}
+
+.countries-list{
+    width: 80%;
+    margin: auto;
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+
+
+        @media screen and (max-width:1300px) {
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center; 
+        }
+
+        li{
+            width: 250px;
+            cursor: pointer;
+
+            div{
+                padding: 10px;
+                margin-left: 20px;
+            }
+
+            a{
+                all:unset;
+            }
+            h3{
+                margin-left: 10px;
+            }
+            strong{
+                font-weight:300;
+            }
+            
+        }
+
+        img{
+            width: 250px;
+            height: 170px;
+            border-radius: 5px 5px 0 0;
+        }
+    }
+}
+
+.btn-back{
+    width: 100px;
+    height: 40px;
+    margin: 30px;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    button{
+        font-size: 1.1em;
+        
+        border: none;
+        background-color: inherit;
+    }
+
+    svg{
+        background-color: inherit;
+    }
+}
+
+.single-country{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width:1300px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    img{
+        width: 350px;
+        height: 240px;
+
+        @media screen and (max-width:1300px) {
+            height: 200px;
+            width: 320px;
+        }
+    }
+
+    h2{
+        font-size: 2em;
+        margin-bottom: 30px;
+
+        @media screen and (max-width:1300px) {
+            font-size: 1.2em;
+        }
+
+    }
+
+    li{
+        line-height: 30px;
+    }
+}
+
+.info-country{
+    display: flex;
+    margin-bottom: 25px;
+
+    @media screen and (max-width:1300px) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    ul{
+        width: 300px;
+    }
+}
+
+.border-country {
+    max-width: 500px;
+    line-height: 40px;
+    word-wrap: break-word;
+}
+
+
+.not-found{
+    text-align: center;
+    color: gainsboro;
+}
