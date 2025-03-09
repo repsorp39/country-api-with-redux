@@ -37,7 +37,7 @@ const CountryCard = () => {
                     <h2> { country.name.common } </h2>
                     <div className='info-country'>
                         <ul>
-                            <li><strong>Native name: </strong> {country.name.nativeName[codeLang].official} </li>
+                            <li><strong>Native name: </strong> {codeLang ? country.name.nativeName[codeLang].official : ""}</li>
                             <li><strong>Population: </strong> {Number(country.population).toLocaleString("en-EN") } </li>
                             <li><strong>Region: </strong> { country.region } </li>
                             <li><strong>Sub Region: </strong> {country.subregion} </li>
